@@ -9,6 +9,7 @@
 // from CYBAVO.
 
 const https = require('https');
+const http = require('https');
 const crypto = require('crypto');
 const rs = require('./randstr');
 const cfg = require('../models/config');
@@ -42,7 +43,7 @@ function tryParseJSON(s) {
 function doRequest(url, options, postData) {
   console.log('request -> ', url, ', options ->', options);
   return new Promise((resolve, reject) => {
-    let req = https.request(url, options, (res) => {
+    let req = http.request(url, options, (res) => {
       let resData = [];
       res.on('data', (fragments) => {
         resData.push(fragments);
