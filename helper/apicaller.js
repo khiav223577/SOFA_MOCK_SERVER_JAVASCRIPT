@@ -42,6 +42,7 @@ function tryParseJSON(s) {
 
 function doRequest(url, options, postData) {
   console.log('request -> ', url, ', options ->', options);
+  url = `http:${url}`
   return new Promise((resolve, reject) => {
     let req = http.request(url, options, (res) => {
       let resData = [];
