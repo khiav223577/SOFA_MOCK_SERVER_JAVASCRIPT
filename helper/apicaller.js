@@ -9,7 +9,7 @@
 // from CYBAVO.
 
 const https = require('https');
-const http = require('https');
+const http = require('http');
 const crypto = require('crypto');
 const rs = require('./randstr');
 const cfg = require('../models/config');
